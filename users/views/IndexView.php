@@ -11,7 +11,7 @@ include("templates/header.php");
                 <div class="col-sm-3">
                     <h2><?php echo $data["title"]; ?></h2>
                 </div>
-                <div class="col-sm-5 text-break">
+                <div class="text-container col-sm-5 text-break">
                     <?php echo $data["content"]; ?>
                 </div>
                 <div class="col-sm-2">

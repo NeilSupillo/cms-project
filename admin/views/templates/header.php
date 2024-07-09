@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +22,7 @@
                     <a href="create.php" class="text-light text-decoration-none"><strong>Add New Post</strong></a>
                 </div>
                 <div class="menu mt-5">
-                    <a href="../index.php" class="text-light text-decoration-none"><strong>View Website</strong></a>
+                    <a href="../users/index.php" class="text-light text-decoration-none"><strong>View Website</strong></a>
                 </div>
                 <div class="menu mt-5">
                     <a href="logout.php" class="btn btn-info">Logout</a>
