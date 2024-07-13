@@ -3,10 +3,10 @@
 
 class Database
 {
-    private $host = 'localhost';
-    private $db_name = 'cms';
-    private $username = 'root';
-    private $password = '';
+    private $host = 'sql110.infinityfree.com';
+    private $db_name = 'if0_36888259_cms';
+    private $username = 'if0_36888259';
+    private $password = 'mtEPVs3nuGb0';
     public $conn;
 
     public function getConnection()

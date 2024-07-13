@@ -1,13 +1,18 @@
-function truncateText() {
-  const textContainer = document.getElementById("text-container");
-  const text = textContainer.textContent;
-  const wordLimit = 50;
-
-  if (text.trim().split(/\s+/).length > wordLimit) {
-    const truncatedText =
-      text.trim().split(/\s+/).slice(0, wordLimit).join(" ") + "...";
-    textContainer.innerHTML = truncatedText;
-  }
+function showPopup(id) {
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("confirmDeleteButton").setAttribute("data-id", id);
 }
 
-truncateText();
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+
+function confirmDelete() {
+  const id = document
+    .getElementById("confirmDeleteButton")
+    .getAttribute("data-id");
+  console.log(id);
+  window.location.href = "delete.php?id=" + id;
+}
