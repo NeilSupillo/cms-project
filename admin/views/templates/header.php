@@ -1,19 +1,10 @@
 <?php
-session_start();
+//session_start();
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style.css">
-    <script src="public/script.js" defer></script>
-</head>
+<?php
+include("head.php");
+?>
 
 <body>
     <div class="dashboard d-flex justify-content-between">
@@ -24,7 +15,7 @@ session_start();
                     <a href="create.php" class="text-light text-decoration-none"><strong>Add New Post</strong></a>
                 </div>
                 <div class="menu mt-5">
-                    <a href="../users/index.php" class="text-light text-decoration-none"><strong>View Website</strong></a>
+                    <a href="../home/" class="text-light text-decoration-none"><strong>View Website</strong></a>
                 </div>
                 <div class="menu mt-5">
                     <a href="logout.php" class="btn btn-info">Logout</a>

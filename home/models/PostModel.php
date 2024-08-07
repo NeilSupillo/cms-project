@@ -1,5 +1,5 @@
 <?php
-class Post
+class PostModel
 {
     private $conn;
     private $table_name = "posts";

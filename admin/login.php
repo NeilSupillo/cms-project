@@ -7,9 +7,9 @@ if (isset($_POST['login'])) {
         session_start();
         $_SESSION["user"] = "admin";
 
-        require_once 'controllers/AdminCon.php';
-        $controller = new AdminCon();
-        $posts = $controller->getAll();
+        // require_once 'controllers/AdminCon.php';
+        // $controller = new AdminCon();
+        // $posts = $controller->getAll();
         header("Location: dashboard.php");
     } else {
 

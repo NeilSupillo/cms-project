@@ -15,15 +15,13 @@ include("templates/header.php");
                     <?php echo $data["content"]; ?>
                 </div>
                 <div class="col-sm-2">
-                    <a href="read.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">READ MORE</a>
+                    <a href="user.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">READ MORE</a>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
 </div>
-<div class="footer bg-dark p-4 mt-4">
-    <a href="../admin/index.php" class="text-light">Admin Panel</a>
-</div>
+
 
 <?php
 include("templates/footer.php");

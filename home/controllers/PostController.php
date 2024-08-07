@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../connect.php';
-require_once __DIR__ . '/../models/HomeModel.php';
+require_once __DIR__ . '/../../config/Database.php';
+require_once __DIR__ . '/../models/PostModel.php';
 
 
 // require_once '../models/Post.php';
@@ -11,11 +11,11 @@ class PostController
     private $db;
     private $post;
 
-    public function __construct()
+    public function __construct($db_value)
     {
         $database = new Database();
-        $this->db = $database->getConnection();
-        $this->post = new Post($this->db);
+        $this->db = $database->getConnection($db_value);
+        $this->post = new PostModel($this->db);
     }
 
     public function index()

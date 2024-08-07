@@ -7,41 +7,20 @@ include("templates/header.php");
 
 <div class="posts-list w-100 p-5">
     <?php
-    if (isset($_SESSION["create"])) {
+    $alerts = ["create", "update", "delete"];
+
+    foreach ($alerts as $alert) {
+        if (isset($_SESSION[$alert])) {
     ?>
-        <div class="alert alert-success">
-            <?php
-            echo $_SESSION["create"];
-            ?>
-        </div>
+            <div class="alert alert-success">
+                <?php echo $_SESSION[$alert]; ?>
+            </div>
     <?php
-        unset($_SESSION["create"]);
+            unset($_SESSION[$alert]);
+        }
     }
     ?>
-    <?php
-    if (isset($_SESSION["update"])) {
-    ?>
-        <div class="alert alert-success">
-            <?php
-            echo $_SESSION["update"];
-            ?>
-        </div>
-    <?php
-        unset($_SESSION["update"]);
-    }
-    ?>
-    <?php
-    if (isset($_SESSION["delete"])) {
-    ?>
-        <div class="alert alert-success">
-            <?php
-            echo $_SESSION["delete"];
-            ?>
-        </div>
-    <?php
-        unset($_SESSION["delete"]);
-    }
-    ?>
+
     <table class="table table-bordered">
         <thead>
             <tr>
